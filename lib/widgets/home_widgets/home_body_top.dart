@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:switch_app/constants/sw_constatns.dart';
+import 'package:switch_app/constants/my_dimens.dart';
+import 'package:switch_app/constants/my_image.dart';
 
 class HomeBodyTop extends StatelessWidget {
   const HomeBodyTop({super.key});
@@ -18,7 +19,7 @@ class HomeBodyTop extends StatelessWidget {
           top: 0,
           child: RotatedBox(
             quarterTurns: 1,
-            child: Text('Pendant Light', style: gettextColor(false)),
+            child: Text('Pendant Light', style: MyDimens().gettextColor(false)),
           ),
         ),
         // Real Text
@@ -27,7 +28,7 @@ class HomeBodyTop extends StatelessWidget {
           top: 100,
           child: RotatedBox(
             quarterTurns: 1,
-            child: Text('Pendant Light', style: gettextColor(true)),
+            child: Text('Pendant Light', style: MyDimens().gettextColor(true)),
           ),
         ),
         // Light img at left
@@ -35,39 +36,28 @@ class HomeBodyTop extends StatelessWidget {
           top: -120,
           left: -90,
           height: size.height * .5,
-          child: Image.asset('assets/switch/light2.png', fit: BoxFit.cover),
+          child: Image.asset(MyImage.light2, fit: BoxFit.cover),
         ),
         // Light img at right
         Positioned(
           top: -40,
           right: -100,
           height: size.height * .48,
-          child: Image.asset('assets/switch/light2.png', fit: BoxFit.cover),
+          child: Image.asset(MyImage.light2, fit: BoxFit.cover),
         ),
         // middle img
         Positioned(
           top: 30,
           right: 10,
           height: size.height * .5,
-          child: Image.asset('assets/switch/light2.png', fit: BoxFit.cover),
+          child: Image.asset(MyImage.light2, fit: BoxFit.cover),
         ),
         // Appbar
         Positioned(
           top: 45,
-          left: 25,
           right: 25,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              InkWell(
-                onTap: () => Navigator.pop(context),
-                child: const Icon(Icons.arrow_back_ios_new,
-                    size: 26, color: Colors.white70),
-              ),
-              const Icon(CupertinoIcons.square_grid_2x2,
-                  size: 32, color: Colors.white70),
-            ],
-          ),
+          child: const Icon(CupertinoIcons.square_grid_2x2,
+              size: 32, color: Colors.white70),
         ),
       ],
     );

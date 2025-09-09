@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:switch_app/constants/sw_constatns.dart';
+import 'package:switch_app/constants/my_color.dart';
 import 'package:switch_app/widgets/details_widgets/details_device_switch.dart';
 
 class DetailsDeviceContainer extends StatelessWidget {
@@ -45,19 +45,19 @@ class DetailsDeviceContainer extends StatelessWidget {
                     width: width,
                     isOn: false,
                     icon: Icons.monitor_outlined,
-                    color: button1Color,
+                    color: MyColor.button1Color,
                   ),
                   DetailsDeviceSwitch(
                     width: width,
                     isOn: true,
                     icon: Icons.lightbulb_outline,
-                    color: button2Color,
+                    color: MyColor.button2Color,
                   ),
                   DetailsDeviceSwitch(
                     width: width,
                     isOn: false,
                     icon: Icons.wifi,
-                    color: button3Color,
+                    color: MyColor.button3Color,
                   ),
                 ],
               ),

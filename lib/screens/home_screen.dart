@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:switch_app/constants/my_color.dart';
 import 'package:switch_app/screens/details_screen.dart';
 import 'package:switch_app/widgets/home_widgets/home_body_painter.dart';
-import 'package:switch_app/constants/sw_constatns.dart';
 import 'package:switch_app/widgets/home_widgets/home_body.dart';
 import 'package:switch_app/widgets/home_widgets/home_navbar.dart';
 
@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: backColor,
+      backgroundColor: MyColor.backColor,
       body: Column(
         children: [
           // Body

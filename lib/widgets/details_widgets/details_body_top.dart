@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:switch_app/constants/sw_constatns.dart';
+import 'package:switch_app/constants/my_color.dart';
+import 'package:switch_app/constants/my_dimens.dart';
+import 'package:switch_app/constants/my_image.dart';
 
 class DetailsBodyTop extends StatelessWidget {
   const DetailsBodyTop({super.key});
@@ -7,10 +9,10 @@ class DetailsBodyTop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         color: Colors.white12,
-        image: DecorationImage(
-            image: AssetImage('assets/switch/pic1.jpg'), fit: BoxFit.cover),
+        image:
+            DecorationImage(image: AssetImage(MyImage.pic1), fit: BoxFit.cover),
       ),
       child: Stack(
         fit: StackFit.expand,
@@ -23,13 +25,13 @@ class DetailsBodyTop extends StatelessWidget {
             child: DecoratedBox(
               decoration: BoxDecoration(boxShadow: [
                 BoxShadow(
-                  color: backColor,
+                  color: MyColor.backColor,
                   spreadRadius: 20,
                   blurRadius: 40,
                   offset: Offset(0, 20),
                 ),
                 BoxShadow(
-                  color: navSecondColor,
+                  color: MyColor.navSecondColor,
                   spreadRadius: 20,
                   blurRadius: 60,
                   offset: Offset(0, 5),
@@ -48,7 +50,11 @@ class DetailsBodyTop extends StatelessWidget {
                   gradient: LinearGradient(
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
-                      colors: [Colors.black38, Colors.black54, backColor])),
+                      colors: [
+                    Colors.black38,
+                    Colors.black54,
+                    MyColor.backColor
+                  ])),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -62,7 +68,7 @@ class DetailsBodyTop extends StatelessWidget {
                     quarterTurns: 1,
                     child: Text(
                       'Living Room',
-                      style: gettextColor(true),
+                      style: MyDimens().gettextColor(true),
                     ),
                   ),
                 ],
